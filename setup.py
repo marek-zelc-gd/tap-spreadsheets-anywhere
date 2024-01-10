@@ -6,7 +6,8 @@ setup(
     version="0.2.0",
     description="Singer.io tap for extracting spreadsheet data from cloud storage",
     author="Eric Simmerman",
-    url="https://github.com/ets/tap-spreadsheets-anywhere",
+    url="https://github.com/marek-zelc-gd/tap-spreadsheets-anywhere",
+    classifiers=["Programming Language :: Python :: 3 :: Only"],
     py_modules=["tap_spreadsheets_anywhere"],
     install_requires=[
         "singer-python>=5.0.12",
@@ -20,6 +21,10 @@ setup(
         'paramiko',
         'azure-storage-blob>=12.14.0'
     ],
+    entry_points="""	
+    [console_scripts]	
+    tap-spreadsheets-anywhere=tap_spreadsheets_anywhere:main	
+    """,
     packages=["tap_spreadsheets_anywhere"],
     include_package_data=True,
     tests_require=[
