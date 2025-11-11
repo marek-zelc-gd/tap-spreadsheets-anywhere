@@ -2,6 +2,8 @@ import csv
 import re
 import logging
 
+csv.field_size_limit(10**8)  # Increase limit to ~100MB per field
+
 LOGGER = logging.getLogger(__name__)
 
 def generator_wrapper(reader):
